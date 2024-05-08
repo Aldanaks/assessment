@@ -149,7 +149,6 @@ console.log(addMenuItem(menu, newMenuItem));
 function countMainCourseItems(menu) {
   if (menu.category === "Main Course") return menu.category.length;
 }
-
 console.log(countMainCourseItems(menu));
 
 /**********
@@ -162,10 +161,8 @@ console.log(countMainCourseItems(menu));
     ANSWER: ["Pasta", "Burger", "Pizza"]
     **********/
 
-function listMenuItemNamesByCategory(menu, category) {
-  // Your code here
-}
-// console.log(listMenuItemNamesByCategory(menu, "Main Course"));
+function listMenuItemNamesByCategory(menu, category) {}
+console.log(listMenuItemNamesByCategory(menu, "Main Course"));
 
 /**********
   Question 6: 🌶️🌶️
@@ -184,7 +181,7 @@ function listMenuItemNamesByCategory(menu, category) {
   **********/
 
 function getCheapestMenuItem(menu) {
-  // Your code here
+  (...math.min)
 }
 // console.log(getCheapestMenuItem(menu));
 
@@ -215,7 +212,12 @@ function getCheapestMenuItem(menu) {
     **********/
 
 function getMenuItemsByIngredient(menu, ingredient) {
-  // Your code here
+  return menu.filter((ingredient) => {
+    if (menu.ingredient.includes(ingredient)) {
+      return true;
+    } else {
+      return false;
+    }
+  });
 }
-
-// console.log(getMenuItemsByIngredient(menu, "Parmesan"));
+console.log(getMenuItemsByIngredient(menu, "Parmesan"));
