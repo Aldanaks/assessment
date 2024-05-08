@@ -147,11 +147,7 @@ console.log(addMenuItem(menu, newMenuItem));
     **********/
 
 function countMainCourseItems(menu) {
-  let sum = 0;
-  for (let i = 0; i < menu.category.length; i++) {
-    if (menu[i].category === "Main Course") sum++;
-    return sum;
-  }
+  if (menu.category === "Main Course") return menu.category.length;
 }
 
 console.log(countMainCourseItems(menu));
